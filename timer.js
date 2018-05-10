@@ -31,6 +31,12 @@ var Timer = {
         } else {
           Timer.seconds--;
         }
+
+        temp_secs = Math.abs(Timer.seconds);
+        if (temp_secs > 120 && document.getElementById('timer-set') !== null) {
+            document.getElementById('timer-set').remove();
+        }
+
         Timer.calculateTime();
         Timer.setupProgressBar();
       }, 1000);
