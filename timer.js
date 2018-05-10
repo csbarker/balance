@@ -86,7 +86,7 @@ var Timer = {
       if (abs_time > max_time) {
         width = 100;
       } else {
-        width = (abs_time / max_time) * 100;
+        width = ((abs_time / max_time) * 100) / 2;
       }
 
       if (element_to_target == '#progress-pos') {
@@ -101,7 +101,7 @@ var Timer = {
         document.querySelector('#progress-pos').style.width = '0%';
         
         if (width == 100) {
-          document.querySelector('#progress-neg').style.width = width + '%';
+          document.querySelector('#progress-neg').style.width = '50%';
           document.querySelector('#progress-neg-left').style.width = '0%';
         } else {
           document.querySelector('#progress-neg').style.width = width + '%';
